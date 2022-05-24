@@ -75,30 +75,29 @@ def main():
         print("\n--------EXERCICIO 17--------\n")
 
         m2 = int(input("Digite a area a ser pintada (em metros quadrados): "))
-        litros = m2/3
-        
-        latas = ((litros/18)+(0.1*litros/18))
-        if (litros/18)+(0.1*litros/18) > int((litros/18)+(0.1*litros/18)):
-            latasint=int(latas)+1
-        else:
-            latasint=int(latas)
-        
-        galoesint = int((litros/3.6)+(0.1*litros/3.6))
-        if (litros/3.6)+(0.1*litros/3.6) > int((litros/3.6)+(0.1*litros/3.6)):
-            galoesint+=1
+        litros = m2/3 * 1.1
 
-        if latas<latasint:
-            litros2 = latasint-(litros/18)
-            galoes2 = int((litros2/3.6)+(0.1*litros2/3.6))
-            if (litros2/3.6)+(0.1*litros/3.6) > int((litros/3.6)+(0.1*litros/3.6)):
-                galoes2+=1
-        
+        galoes = litros/3.6
+        if galoes > int(galoes):
+            galoes = int(galoes)+1
+        else:
+            galoes = int(galoes)
+
+        latas = galoes/5
+        latas2 = int(latas)
+        if latas > int(latas):
+            latas = int(latas)+1
+        else:
+            latas = int(latas)
+
+        galoes2 = galoes - (latas2*5)
 
         print(latas)
-        print(latasint)
-        print(galoesint)
-        print((int(latas), galoes2))
+        print(galoes)
+        print(latas2, galoes2)
 
+        
+        
 
 
     
