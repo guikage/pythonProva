@@ -96,24 +96,17 @@ def main():
         print(galoes)
         print(latas2, galoes2)
 
-        
-        
+    def ex18():
+        print("\n--------EXERCICIO 18--------\n")
 
+        size = float(input("Digite o tamanho do arquivo (em MB): "))
+        speed = float(input("Digite a velocidade do link (em Mbps): "))
 
-    
+        timeSeconds = size*8/speed
+        timeMinutes = int(timeSeconds/60)
+        timeSecRemaining = timeSeconds - (timeMinutes*60)
 
-
-
-
-
-
-
-
-
-
-
-
-
+        print("O arquivo demorara %d minutos e %d segundos para baixar." % (timeMinutes, timeSecRemaining))
 
     seletor = int(input("Digite o numero do exercicio: "))
     if seletor == 11:
@@ -130,6 +123,8 @@ def main():
         ex16()
     elif seletor == 17:
         ex17()
+    elif seletor == 18:
+        ex18()
 
 
     else:
